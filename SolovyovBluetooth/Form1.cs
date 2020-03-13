@@ -76,8 +76,11 @@ namespace SolovyovBluetooth
                 // добавление в список свойств устройства
                 lbx_prop.Items.Add("Адрес:      " + device.DeviceAddress);
                 int k;
-                for (int i = 0; ; i++)
+                k = 0;
+                for (int i = 0; i < manufacture.Count; i++)
+                  
                 {
+                 
                     if (mac[i][0] == device.DeviceAddress.ToString()[0] &&
                         mac[i][1] == device.DeviceAddress.ToString()[1] &&
                         mac[i][2] == device.DeviceAddress.ToString()[2] &&
