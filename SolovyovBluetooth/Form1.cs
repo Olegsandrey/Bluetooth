@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text.RegularExpressions;
+using InTheHand.Net.Bluetooth;
+using InTheHand.Net.Sockets;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -12,6 +16,8 @@ namespace SolovyovBluetooth
 {
     public partial class Form1 : Form
     {
+        List<BluetoothDeviceInfo> DevList = new List<BluetoothDeviceInfo>();
+        public delegate void UpdateDiscoverBox(List<BluetoothDeviceInfo> d);
         public Form1()
         {
             InitializeComponent();
